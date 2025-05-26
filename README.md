@@ -4,7 +4,7 @@ It is common to hear the saying that intelligence is the act of information comp
 
 **Can information obfuscation also be a measure of LLM 'intelligence'?**
 
-[ > Open the benchmark here! <](here)
+[ > Open the benchmark here! <](https://10decikelvin.github.io/cob)
 
 ![Screenshot of the benchmark main page](header.png)
 
@@ -45,8 +45,8 @@ The model that is able to deobfuscate more colors across the two rounds 'wins' (
 
 2.  **Clone the Repository (if applicable):**
     ```bash
-    # git clone https://10decikelvin/cob
-    # cd llm-obfuscation-benchmark
+    git clone https://github.com/10decikelvin/cob.git
+    cd llm-obfuscation-benchmark
     ```
 
 3.  **Create and Activate a Virtual Environment:**
