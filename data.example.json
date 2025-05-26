@@ -1,0 +1,91 @@
+[
+  {
+    "battle_id": "20250526T170000Z_modelA_vs_modelB",
+    "timestamp_start": "2025-05-26T17:00:00Z",
+    "timestamp_end": "2025-05-26T17:05:00Z",
+    "model_A_info": {
+      "name": "openai/gpt-3.5-turbo",
+      "role_in_round1": "LLM1_LLM2",
+      "role_in_round2": "LLM3"
+    },
+    "model_B_info": {
+      "name": "google/gemini-pro",
+      "role_in_round1": "LLM3",
+      "role_in_round2": "LLM1_LLM2"
+    },
+    "plaintext_color": "A1B2C3",
+    "rounds": [
+      {
+        "round_number": 1,
+        "obfuscator_model": "openai/gpt-3.5-turbo",
+        "deobfuscator_model": "openai/gpt-3.5-turbo",
+        "attacker_model": "google/gemini-pro",
+        "obfuscated_text": "Some cleverly hidden message for A1B2C3",
+        "instructions_list": "Step 1: Reverse the string. Step 2: Take every second character. Step 3: Convert from base64.",
+        "llm1_conversation": {
+          "prompt": "<system_prompt_for_llm1>...</system_prompt_for_llm1><user_prompt><color_to_obfuscate>A1B2C3</color_to_obfuscate></user_prompt>",
+          "response": "<obfuscated_text>Some cleverly hidden message for A1B2C3</obfuscated_text><instructions_list>Step 1: Reverse the string. Step 2: Take every second character. Step 3: Convert from base64.</instructions_list>",
+          "parsed_obfuscated_text": "Some cleverly hidden message for A1B2C3",
+          "parsed_instructions": "Step 1: Reverse the string. Step 2: Take every second character. Step 3: Convert from base64."
+        },
+        "llm2_conversation": {
+          "prompt": "<system_prompt_for_llm2>...</system_prompt_for_llm2><user_prompt><obfuscated_text>Some cleverly hidden message for A1B2C3</obfuscated_text><instructions_list>Step 1: Reverse the string. Step 2: Take every second character. Step 3: Convert from base64.</instructions_list></user_prompt>",
+          "response": "<deobfuscated_color>A1B2C3</deobfuscated_color>",
+          "parsed_deobfuscated_color": "A1B2C3",
+          "is_correct_deobfuscation": true
+        },
+        "llm3_attempts": [
+          {
+            "attempt_number": 1,
+            "instructions_provided_percentage": 0,
+            "prompt": "<system_prompt_for_llm3>...</system_prompt_for_llm3><user_prompt><obfuscated_text>Some cleverly hidden message for A1B2C3</obfuscated_text></user_prompt>",
+            "response": "<deobfuscated_color>FFFFFF</deobfuscated_color>",
+            "guessed_color": "FFFFFF",
+            "is_correct": false
+          },
+          {
+            "attempt_number": 2,
+            "instructions_provided_percentage": 0.20,
+            "prompt": "<system_prompt_for_llm3>...</system_prompt_for_llm3><user_prompt><obfuscated_text>Some cleverly hidden message for A1B2C3</obfuscated_text><instructions_for_llm3>Step 1: Reverse the string. Ste</instructions_for_llm3></user_prompt>",
+            "response": "<deobfuscated_color>A1B2C3</deobfuscated_color>",
+            "guessed_color": "A1B2C3",
+            "is_correct": true
+          }
+        ],
+        "attacker_succeeded_on_attempt": 2
+      },
+      {
+        "round_number": 2,
+        "obfuscator_model": "google/gemini-pro",
+        "deobfuscator_model": "google/gemini-pro",
+        "attacker_model": "openai/gpt-3.5-turbo",
+        "obfuscated_text": "Another obfuscation for A1B2C3",
+        "instructions_list": "Instruction X, Instruction Y, Instruction Z",
+        "llm1_conversation": {
+          "prompt": "...",
+          "response": "...",
+          "parsed_obfuscated_text": "Another obfuscation for A1B2C3",
+          "parsed_instructions": "Instruction X, Instruction Y, Instruction Z"
+        },
+        "llm2_conversation": {
+          "prompt": "...",
+          "response": "...",
+          "parsed_deobfuscated_color": "A1B2C3",
+          "is_correct_deobfuscation": true
+        },
+        "llm3_attempts": [
+          {
+            "attempt_number": 1,
+            "instructions_provided_percentage": 0,
+            "prompt": "...",
+            "response": "...",
+            "guessed_color": "000000",
+            "is_correct": false
+          }
+        ],
+        "attacker_succeeded_on_attempt": null
+      }
+    ],
+    "battle_outcome": "model_A_wins"
+  }
+]

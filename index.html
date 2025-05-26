@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COB: Color Obfuscation Benchmark</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>COB: Color Obfuscation Benchmark</h1>
+    </header>
+    <main>
+        <section id="elo-rankings">
+            <h2>ELO Rankings</h2>
+            <table id="elo-table">
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Model Name</th>
+                        <th>ELO Rating</th>
+                        <th>Battles Played</th>
+                    </tr>
+                </thead>
+                <tbody id="elo-table-body">
+                    <!-- ELO data will be populated here by script.js -->
+                </tbody>
+            </table>
+        </section>
+
+        <section id="battle-history">
+            <h2>Battle History</h2>
+            <p>Click on a battle to see details.</p>
+            <ul id="battle-list">
+                <!-- Battle list will be populated here -->
+            </ul>
+        </section>
+
+        <section id="battle-details-section">
+            <h2>Battle Details</h2>
+            <div id="battle-details-content">
+                <p>Select a battle from the list above to view its details.</p>
+                <!-- Detailed battle info will be populated here -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Refresh the page to load the latest data from data.json</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

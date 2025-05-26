@@ -1,0 +1,123 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+main {
+    padding: 1rem;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+}
+
+section {
+    background: #fff;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #333;
+    margin-top: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+th, td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f0f0f0;
+}
+
+#battle-list {
+    list-style: none;
+    padding: 0;
+}
+
+#battle-list li {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    background-color: #f9f9f9;
+    border-radius: 3px;
+}
+
+#battle-list li:hover {
+    background-color: #e9e9e9;
+}
+
+#battle-details-content {
+    margin-top: 1rem;
+    padding: 1rem;
+    border: 1px solid #eee;
+    background-color: #fdfdfd;
+    border-radius: 3px;
+}
+
+#battle-details-content h3 {
+    margin-top: 0;
+    color: #555;
+}
+
+#battle-details-content pre {
+    background-color: #eee;
+    padding: 0.5rem;
+    border-radius: 3px;
+    white-space: pre-wrap;       /* Since CSS 2.1 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
+.round-details, .llm-conversation, .llm3-attempt {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px dashed #ccc;
+    border-radius: 3px;
+}
+
+.round-details h4 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    background-color: #eef;
+    padding: 0.25rem;
+}
+.llm-conversation strong, .llm3-attempt strong {
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #333;
+    color: #fff;
+    margin-top: 2rem;
+}
